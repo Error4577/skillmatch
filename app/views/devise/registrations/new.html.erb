@@ -67,6 +67,11 @@
         <label>自己紹介文</label>
         <%= text_area :user, :self_introduction, maxlength: "1000", rows: "10", class:"form-control" %>
       </div>
+      <div class="form-group">
+        <%= f.fields_for :skills do |s| %>
+          <%= s.text_field :skill %>
+        <% end %>
+      </div>
       <div class="text-center">
         <%= f.submit "はじめる", class: "btn submitBtn" %>
         <%= render "devise/shared/links" %>
