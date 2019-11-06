@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_094608) do
+ActiveRecord::Schema.define(version: 2019_11_06_102249) do
 
   create_table "reactions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "to_user_id", null: false
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_094608) do
     t.datetime "updated_at", null: false
     t.string "name", limit: 100, default: "", null: false
     t.string "self_introduction", limit: 500
-    t.integer "sex", default: 0, null: false
+    t.integer "sex", default: 0
     t.string "img_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
