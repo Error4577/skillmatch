@@ -25,3 +25,11 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# 画像はアップロードしない
+/app/assets/images/*
+/public/uploads/*
+/db/dummy_img/*
+
+# .DS_Storeファイルはアップロードしない
+.DS_Store
